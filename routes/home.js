@@ -25,7 +25,7 @@ router.post("/insert", async (req, res, next) => {
     const data = req.body; // Assuming the data to be inserted is sent in the request body
 
     // Add a new document with a generated ID
-    const docRef = await db.collection("items").add(data);
+    const docRef = await db.collection("first_vessel").add(data);
 
     return res.status(200).json({
       message: "Data inserted successfully",
